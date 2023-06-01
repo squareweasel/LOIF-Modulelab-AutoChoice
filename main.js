@@ -156,15 +156,11 @@
             // Fade in paragraph after a short delay
             showAfter(delay, paragraphElement);
             delay += 20.0;
-
-
-            
-
         }
 
         // Create HTML choices from ink choices
         story.currentChoices.forEach(function(choice) {
-            // console.log(story.currentChoices);
+    
             // Create paragraph with anchor element
             var choiceTags = choice.tags;
             var customClasses = [];
@@ -234,6 +230,20 @@
             }
         });
 
+        function autoPlay () {
+
+                if (story.currentChoices[0].text=="continue")
+                { 
+                    story.ChooseChoiceIndex(0);
+                    removeAll(".choice");
+                    continueStory();
+                }
+        }
+        
+        if (story.variablesState["skip"]) {
+            console.log("skip is true, autoplaying.");
+            autoPlay();
+        }
 		// Unset storyContainer's height, allowing it to resize itself
 		storyContainer.style.height = "";
 
