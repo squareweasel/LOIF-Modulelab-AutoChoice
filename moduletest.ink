@@ -5,7 +5,7 @@ VAR c1cnt=0
 ==start==
 starting story
 #cc1 
-+{skip} [continue]
++[continue]
     continuing story 1
 ->cc1
 +[stop]
@@ -13,14 +13,14 @@ starting story
 
 ==cc1==
 #cc2 
-+{skip} [continue]
++[continue]
     continuing story 2
 ->cc2
 +[stop]
     ->END
 ==cc2==
 #cc3 
-+{skip} [continue]
++[continue]
     continuing story 3
 ->cc3
 +[stop]
@@ -34,7 +34,7 @@ starting story
     ->END
 ==cc4==
 #cc5
-+{skip} [continue]
++[continue]
     continuing story 5
     ->endChoice
 +[stop]
